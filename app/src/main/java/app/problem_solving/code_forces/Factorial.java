@@ -7,12 +7,14 @@ public class Factorial {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        long number = scanner.nextLong();
-
-        if (number == 1) {
-            System.out.println("NO");
-        } else {
-            System.out.println("YES");
-        }
+        System.out.println(factorial(scanner.nextInt()));
     }
+
+    private static int factorial(int number) {
+        if (number > 0) {
+            return number * factorial(number - 1);
+        } else
+            return 1;
+    }
+
 }

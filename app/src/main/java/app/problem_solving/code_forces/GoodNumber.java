@@ -4,33 +4,29 @@ import java.util.Scanner;
 
 public class GoodNumber {
 
+
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
-        int size = scanner.nextInt(); // 10
-        int range = scanner.nextInt(); // from 0 to 6
-        int result = 0;
-        int counter = 0;
+        int size = scanner.nextInt();
+        int range = scanner.nextInt();
+        String my_num = "0123456789";
+        int counter_1 = 0;
+        int counter_2 = 0;
 
-        // size = 10
         for (int i = 0; i < size; i++) {
-            // 123456706
-            String num = scanner.next();
-            // size 7
-            for (int j = 0; j < num.length(); j++) {
-                counter = 0;
-                // loop on numbers
-                for (int a = 0; a <= range; a++) {
-                    if (num.contains(String.valueOf(a))) {
-                        counter++;
-                    }
+            String value = scanner.next();
+            for (int x = 0; x < range + 1; x++) {
+                if (value.contains(my_num.substring(x, x + 1))) {
+                    counter_1++;
                 }
             }
-            if (counter == range + 1) {
-                result++;
+
+            if (counter_1 >= range + 1) {
+                counter_2++;
             }
+            counter_1 = 0;
         }
-        System.out.println(result);
+        System.out.println(counter_2);
     }
 
 }
