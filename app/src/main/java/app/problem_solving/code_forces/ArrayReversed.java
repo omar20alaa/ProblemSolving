@@ -1,4 +1,4 @@
-package app.problem_solving.code_masry;
+package app.problem_solving.code_forces;
 
 import java.util.Scanner;
 

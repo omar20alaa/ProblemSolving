@@ -1,8 +1,9 @@
-package app.problem_solving.code_masry;
+package app.problem_solving.code_forces;
 
 import java.util.Scanner;
 
-class AverageThreeNumbers {
+class CalculateModulus {
+
 
    public static void main(String[] args) {
 
@@ -13,15 +14,16 @@ class AverageThreeNumbers {
       int x = input.nextInt();
       System.out.println("Enter second number --> ");
       int y = input.nextInt();
-      System.out.println("Enter third number --> ");
-      int z = input.nextInt();
-      int result = (x + y + z ) / 3;
 
+      int division = x / y;
+      int modulus = x % y;
 
-      System.out.println("Average --> " + result);
+      System.out.println("Division --> " + division);
+      System.out.println("Modulus = --> " + modulus);
 
 
    }
+
 
 
 }
